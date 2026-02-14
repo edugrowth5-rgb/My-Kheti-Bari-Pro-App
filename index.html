@@ -17,16 +17,28 @@
             scroll-behavior: smooth;
         }
 
-        .header {
-            background: linear-gradient(135deg, var(--primary), #2e7d32);
-            color: white; padding: 30px 15px 20px; text-align: center;
-            border-radius: 0 0 30px 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .header h1 { margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px; }
-        .header p { margin: 5px 0 0; font-size: 11px; opacity: 0.9; font-weight: bold; color: var(--accent); }
+/* Purane .header ko isse badlein */
+.header {
+    position: fixed; /* Header ko chipkane ke liye */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001; /* Sabse upar dikhne ke liye */
+    background: linear-gradient(135deg, var(--primary), #2e7d32);
+    color: white; 
+    padding: 20px 15px 15px; /* Padding thodi kam kar di taaki screen kam ghere */
+    text-align: center;
+    border-radius: 0 0 20px 20px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 
-        .container { padding: 15px; padding-bottom: 110px; min-height: 100vh; }
-
+/* Purane .container ko isse badlein */
+.container { 
+    padding: 15px; 
+    padding-top: 100px; /* Header ke niche se content dikhane ke liye gap */
+    padding-bottom: 110px; 
+    min-height: 100vh; 
+}
         .card {
             background: var(--card-bg); border-radius: 20px; padding: 20px; margin-bottom: 20px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.05);
@@ -290,4 +302,3 @@
 
 </body>
 </html>
-
